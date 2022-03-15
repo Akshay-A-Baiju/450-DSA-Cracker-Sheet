@@ -1,6 +1,7 @@
 // problem link: https://practice.geeksforgeeks.org/problems/kth-smallest-element5635/1#
 
-int kthSmallest(int arr[], int l, int r, int k) {
+int kthSmallest(int arr[], int l, int r, int k)
+{
         // using max heap
         priority_queue <int> pq;
         for (int i=l;i<=r;i++)
@@ -9,4 +10,7 @@ int kthSmallest(int arr[], int l, int r, int k) {
             if (pq.size()>k) pq.pop();
         }
         return pq.top();
-    }
+}
+
+// TC: O(n*logk)
+// SC: O(n)
